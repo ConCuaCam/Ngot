@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=PT+Sans:ital,wght@0,400;1,700&family=Roboto:ital,wght@0,700;1,400&display=swap');
+
+
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: hsl(205, 78%, 60%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(206, 33%, 96%);
+    --clr-white: #fff;
+    --clr-gold: #c59d5f;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-secondary:    #f16230;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 900px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 82px;
+}
+
+body {
+    font-family: var(--ff-secondary);
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(91, 82, 82, 0.4), rgba(0, 0, 0, 0.8)), url(https://znews-photo.zingcdn.me/w860/Uploaded/izhqv/2017_09_28/18238563_1521686024540516_1167805767140430691_o.jpg) center/cover no-repeat;
+}
+
+nav {
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-white);
+    box-shadow: var(--dark-shadow);
+    z-index: 999;
+}
+
+.fixed ul li a {
+    color: var(--clr-grey-1);
+}
+
+.nav-center {
+    width: 90vw;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-toggle {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--clr-grey-1);
+    display: none;
+}
+
+.nav-right .nav-toggle:hover {
+    color: var(--clr-secondary);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li a {
+    color: var(--clr-white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: var(--spacing);
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--clr-secondary);
+}
+
+.banner {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    text-align: center;
+    color: var(--clr-white);
+    width: var(--fixed-width);
+}
+
+.container img {
+    width: 300px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Climate Crisis', cursive;
+    margin-bottom: 0.75rem;
+    letter-spacing: var(--spacing);
+}
+
+h3 {
+    font-size: 5rem;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    letter-spacing: var(--spacing);
+}
+
+.container a,
+.tour-info button {
+    color: var(--clr-white);
+    font-family: var(--ff-secondary);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    background-color: transparent;
+    transition: var(--transition);
+    display: inline-block;
+    font-weight: 700;
+}
+
+.container a:hover {
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+}
+
+section {
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    text-align: center;
+    width: var(--fixed-width);
+}
+
+#services {
+    background-color: var(--clr-white);
+}
+
+h4 {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+hr {
+    margin: 0 auto;
+    background-color: var(--clr-black);
+    width: 5rem;
+    height: 0.25rem;
+    border: none;
+}
+
+section p {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.member-team,
+.album {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+.member-team img {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.wrap {
+    background-color: #13181d;
+}
+
+.album img, 
+h5,
+.album a {
+    width: 100%;
+    padding: 0 15px;
+}
+
+h5 {
+    font-size: 1rem;
+    color: var(--clr-white);
+}
+
+.album a {
+    display: block;
+    color: #d0343a;
+    margin: 0.5rem 0;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.flex {
+    display: flex;
+    margin-top: 3rem;
+    gap: 3rem;
+    justify-content: space-around;
+}
+
+.tour-info {
+    flex: 0 40%;
+    max-width: 40%;
+    padding: 0 15px;
+    text-align: left;
+    position: relative;
+}
+
+.tour-info h2 {
+    padding-top: 2rem;
+    text-transform: capitalize;
+}
+
+.tour-info button {
+    color: var(--clr-black);
+    border-color: var(--clr-black);
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.tour-info button:hover {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.tour-img {
+    flex: 0 51.5%;
+    max-width: 51.5%;
+    padding: 0 15px;
+    cursor: pointer;
+    transform: var(--transition);
+}
+
+.tour-img:hover {
+    transform: translateX(-10px) translateZ(0);
+    transition: var(--transition);
+}
+
+.tour-img img {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+}
+
+.contact-info, .contact-form {
+    flex: 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+}
+
+section .contact-info p {
+    padding: 0.5rem 0 ;
+    color: var(--clr-white);
+    text-align: left;
+}
+
+
+.contact-info p i {
+    margin-right: 1rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-family: var(--ff-secondary);
+    outline: none;
+}
+
+.info button {
+    float: right;
+    padding: 0.75rem 1.5rem;
+    color: var(--clr-white);
+    background-color: transparent;
+    border: 2px solid var(--clr-white);
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info button:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+footer ul li a {
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: var(--clr-black);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer ul li a:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1023px) {
+    nav {
+        background-color: var(--clr-white);
+        box-shadow: var(--dark-shadow);
+    }
+
+    .nav-center {
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right {
+        width: 100%;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        text-align: left;
+        display: block;
+        overflow: hidden;
+        height: 0;
+        transition: var(--transition);
+    }
+    .nav-links li a {
+        padding: 0.75rem 0; 
+        color: var(--clr-grey-1);
+        display: block;
+        margin: 0;
+    }
+
+    .nav-links li a:hover {
+        color: var(--clr-grey-1);
+    }
+
+    .container img {
+        width: 200px;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+    }
+    .active {
+        height: 225.562px;
+    }
+
+    .hidden {
+        height: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+    .container a {
+        font-size: 0.875rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+
+    section, .container {
+        width: 720px;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 740px) {
+    .container img {
+        width: 150px;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+    #about p {
+        padding-left:  15px;
+        padding-right: 15px;
+    }
+    .member-team,
+    .album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .album {
+        margin: 0;
+    }
+    .flex {
+        gap: 1rem;
+        margin-top: 0;
+    }
+    .tour-info button{
+        margin-left: 1rem;
+        width: 133px;
+        font-size: 0.625rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    section, .container {
+        width: 100%;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info button {
+        width: 100%;
+    }
+    .contact-info, .contact-form {
+        flex: 0 100%;
+        max-width: 100%;
+    }
+    .contact-info {
+        margin-bottom: 1rem;
+    }
+}
